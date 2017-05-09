@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 16, 2015 6:45:56 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.sdajava.hibernaterelations.entity.Passport" table="PASSPORT">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="passportNo" type="java.lang.String">
+            <column name="PASSPORTNO" />
+        </property>
+        <property name="expryDt" type="java.util.Date">
+            <column name="EXPRYDT" />
+        </property>
+        <one-to-one name="employee" property-ref="passport"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 28, 2015 6:36:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<!-- <class name="in.javahome.orm.inheritance.entity.Payment" table="PAYMENT_3">
+
+		<id name="paymentId" type="java.lang.Integer">
+			<column name="PAYMENTID" />
+			<generator class="increment" />
+		</id>
+		<property name="amount" type="double">
+			<column name="AMOUNT" />
+		</property>
+	</class> -->
+
+	<class name="com.sdajava.hibernaterelations.inheritance.entity.NetBanking"
+		table="NET_BANKING_3">
+		<id name="paymentId" >
+		</id>
+		<property name="accNumber" />
+		<property name="bankName" />
+		<property name="amount"/>
+	</class>
+
+	<class name="com.sdajava.hibernaterelations.inheritance.entity.CardPayment"
+		table="CARD_PAYMENT_3">
+		<id name="paymentId"/>
+		<property name="cardType" />
+		<property name="amount"/>
+	</class>
+</hibernate-mapping>
